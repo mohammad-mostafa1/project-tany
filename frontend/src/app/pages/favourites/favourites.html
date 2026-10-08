@@ -1,0 +1,28 @@
+<div class="container page">
+  <header class="section-head">
+    <div>
+      <h1>Favourites</h1>
+      <p class="muted">
+        {{ count() }} {{ count() === 1 ? 'product' : 'products' }} saved for later.
+      </p>
+    </div>
+    <a class="btn btn-outline btn-sm" routerLink="/">
+      <app-icon name="chevron-left" [size]="16" /> Keep browsing
+    </a>
+  </header>
+
+  @if (products().length === 0) {
+    <div class="empty-state card">
+      <app-icon name="heart" [size]="46" />
+      <h2>No favourites yet</h2>
+      <p>Tap the heart on any product to keep it here.</p>
+      <a class="btn btn-primary" routerLink="/category/laptops">Find something you like</a>
+    </div>
+  } @else {
+    <div class="product-grid stagger">
+      @for (product of products(); track product._id) {
+        <app-product-card [product]="product" />
+      }
+    </div>
+  }
+</div>

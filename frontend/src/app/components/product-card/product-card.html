@@ -1,0 +1,71 @@
+<article class="card product-card">
+  <a class="media" [routerLink]="['/product', product()._id]">
+    <img
+      [src]="image()"
+      [alt]="product().name"
+      loading="lazy"
+      decoding="async"
+      width="240"
+      height="240"
+    />
+
+    <div class="flags">
+      @if (product().discountPercentage > 0) {
+        <span class="badge badge-sale">-{{ product().discountPercentage }}%</span>
+      }
+      @if (!product().inStock) {
+        <span class="badge badge-danger">Out of stock</span>
+      } @else if (product().stock <= 10) {
+        <span class="badge badge-neutral">Only {{ product().stock }} left</span>
+      }
+    </div>
+
+    @if (!isAdmin()) {
+      <button
+        type="button"
+        class="fav"
+        [class.active]="isFavourite()"
+        (click)="toggleFavourite($event)"
+        [attr.aria-label]="
+          isFavourite() ? 'Remove ' + product().name + ' from favourites'
+                        : 'Save ' + product().name + ' to favourites'
+        "
+        [attr.aria-pressed]="isFavourite()"
+      >
+        <app-icon name="heart" [size]="18" [filled]="isFavourite()" />
+      </button>
+    }
+  </a>
+
+  <div class="body">
+    <span class="brand">{{ product().brand }}</span>
+
+    <a class="name" [routerLink]="['/product', product()._id]">{{ product().name }}</a>
+
+    <app-star-rating [rating]="product().rating" [size]="13" />
+
+    <div class="pricing">
+      <span class="price">{{ product().price | egp }}</span>
+      @if (product().oldPrice; as oldPrice) {
+        <s class="old-price">{{ oldPrice | egp }}</s>
+      }
+    </div>
+
+    @if (!isAdmin()) {
+      <button
+        type="button"
+        class="btn btn-primary btn-sm btn-block"
+        (click)="addToCart($event)"
+        [disabled]="!product().inStock"
+      >
+        <app-icon [name]="inCart() ? 'check' : 'cart'" [size]="16" />
+        {{ !product().inStock ? 'Out of stock' : inCart() ? 'In cart — add more' : 'Add to cart' }}
+      </button>
+    } @else {
+      <a class="btn btn-outline btn-sm btn-block" [routerLink]="['/admin/products', product()._id, 'edit']">
+        <app-icon name="edit" [size]="16" />
+        Edit product
+      </a>
+    }
+  </div>
+</article>

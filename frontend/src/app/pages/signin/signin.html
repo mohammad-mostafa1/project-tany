@@ -1,0 +1,87 @@
+<div class="auth-page">
+  <div class="container auth-layout">
+    <section class="auth-card card animate-in">
+      <header class="auth-head">
+        <span class="mark"><app-icon name="bolt" [size]="22" [filled]="true" /></span>
+        <h1>Welcome back</h1>
+        <p class="muted">Sign in to track orders, save favourites and check out faster.</p>
+      </header>
+
+      <form #signinForm="ngForm" (ngSubmit)="submit(signinForm)" novalidate>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required
+            email
+            [(ngModel)]="credentials.email"
+            #email="ngModel"
+            [class.invalid]="email.invalid && email.touched"
+          />
+          @if (email.invalid && email.touched) {
+            <p class="field-error">
+              <app-icon name="alert" [size]="14" />
+              @if (email.errors?.['required']) {
+                Email is required.
+              } @else {
+                Enter a valid email address.
+              }
+            </p>
+          }
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input
+              id="password"
+              name="password"
+              [type]="showPassword() ? 'text' : 'password'"
+              autocomplete="current-password"
+              placeholder="Your password"
+              required
+              minlength="8"
+              [(ngModel)]="credentials.password"
+              #password="ngModel"
+              [class.invalid]="password.invalid && password.touched"
+            />
+            <button
+              type="button"
+              class="reveal"
+              (click)="togglePassword()"
+              [attr.aria-label]="showPassword() ? 'Hide password' : 'Show password'"
+            >
+              <app-icon [name]="showPassword() ? 'close' : 'user'" [size]="16" />
+            </button>
+          </div>
+          @if (password.invalid && password.touched) {
+            <p class="field-error">
+              <app-icon name="alert" [size]="14" />
+              @if (password.errors?.['required']) {
+                Password is required.
+              } @else {
+                Password must be at least 8 characters.
+              }
+            </p>
+          }
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="submitting()">
+          @if (submitting()) {
+            <span class="spinner"></span> Signing in…
+          } @else {
+            Sign in
+          }
+        </button>
+      </form>
+
+      <p class="switch">
+        New to VoltEdge? <a routerLink="/signup">Create an account</a>
+      </p>
+    </section>
+  </div>
+</div>

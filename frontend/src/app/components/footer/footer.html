@@ -1,0 +1,54 @@
+<section class="promises">
+  <div class="container promise-grid">
+    @for (promise of promises; track promise.title) {
+      <div class="promise">
+        <span class="promise-icon"><app-icon [name]="promise.icon" [size]="22" /></span>
+        <div>
+          <strong>{{ promise.title }}</strong>
+          <p class="muted">{{ promise.text }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="about">
+      <a class="logo" routerLink="/">
+        <span class="logo-mark"><app-icon name="bolt" [size]="20" [filled]="true" /></span>
+        <span class="logo-text">Volt<span>Edge</span></span>
+      </a>
+      <p class="muted">
+        Mobiles, laptops and accessories at real Egyptian prices — with official warranty
+        and cash on delivery across the country.
+      </p>
+    </div>
+
+    <div class="links">
+      <h4>Shop</h4>
+      @for (category of categories; track category.slug) {
+        <a [routerLink]="['/category', category.slug]">{{ category.label }}</a>
+      }
+    </div>
+
+    <div class="links">
+      <h4>Account</h4>
+      <a routerLink="/signin">Sign in</a>
+      <a routerLink="/signup">Create account</a>
+      <a routerLink="/orders">Track orders</a>
+      <a routerLink="/favourites">Favourites</a>
+    </div>
+
+    <div class="links">
+      <h4>Contact</h4>
+      <span class="muted">16000 — daily 9am to 10pm</span>
+      <span class="muted">support&#64;voltedge.com</span>
+      <span class="muted">Nasr City, Cairo</span>
+    </div>
+  </div>
+
+  <div class="container bottom">
+    <span class="muted">&copy; {{ year }} VoltEdge. Student project — prices are sampled from the Egyptian market.</span>
+  </div>
+</footer>

@@ -1,0 +1,139 @@
+.promises {
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+  padding-block: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--space-4);
+}
+
+.promise {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.promise strong {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  display: block;
+}
+
+.promise p {
+  font-size: 0.85rem;
+}
+
+.promise-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding-block: var(--space-7) var(--space-4);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: var(--space-6) var(--space-5);
+}
+
+.about p {
+  margin-top: var(--space-3);
+  font-size: 0.9rem;
+  max-width: 34ch;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.logo-text span {
+  color: var(--primary);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.links h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: var(--space-1);
+}
+
+.links a {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  width: fit-content;
+  transition: color var(--t-fast) var(--ease-out),
+    transform var(--t-fast) var(--ease-out);
+}
+
+.links a:hover {
+  color: var(--primary);
+  transform: translateX(3px);
+}
+
+.links span {
+  font-size: 0.9rem;
+}
+
+.bottom {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

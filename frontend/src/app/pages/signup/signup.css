@@ -1,0 +1,57 @@
+.auth-page {
+  padding-block: var(--space-7) var(--space-8);
+}
+
+.auth-card {
+  max-width: 620px;
+  margin-inline: auto;
+  padding: var(--space-6);
+}
+
+.auth-head {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.auth-head h1 {
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+}
+
+.auth-head p {
+  font-size: 0.93rem;
+  max-width: 44ch;
+  margin-inline: auto;
+}
+
+.mark {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-3);
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  box-shadow: var(--shadow-primary);
+}
+
+form .btn {
+  margin-top: var(--space-2);
+}
+
+.switch {
+  margin-top: var(--space-5);
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.switch a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}

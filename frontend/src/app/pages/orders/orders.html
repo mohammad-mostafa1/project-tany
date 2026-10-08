@@ -1,0 +1,72 @@
+<div class="container page">
+  <header class="section-head">
+    <div>
+      <h1>Your orders</h1>
+      <p class="muted">Everything you've bought from VoltEdge.</p>
+    </div>
+    <a class="btn btn-outline btn-sm" routerLink="/">
+      <app-icon name="chevron-left" [size]="16" /> Keep shopping
+    </a>
+  </header>
+
+  @if (loading()) {
+    <div class="order-skeletons">
+      @for (item of [1, 2]; track $index) {
+        <div class="skeleton order-skeleton" aria-hidden="true"></div>
+      }
+    </div>
+  } @else if (orders().length === 0) {
+    <div class="empty-state card">
+      <app-icon name="clipboard" [size]="46" />
+      <h2>No orders yet</h2>
+      <p>When you place an order it will show up here with its status.</p>
+      <a class="btn btn-primary" routerLink="/category/mobiles">Start shopping</a>
+    </div>
+  } @else {
+    <div class="orders stagger">
+      @for (order of orders(); track order._id) {
+        <article class="card order">
+          <header class="order-head">
+            <div>
+              <span class="muted">Order</span>
+              <strong>#{{ order._id.slice(-8).toUpperCase() }}</strong>
+            </div>
+            <div>
+              <span class="muted">Placed</span>
+              <strong>{{ order.createdAt | date: 'mediumDate' }}</strong>
+            </div>
+            <div>
+              <span class="muted">Total</span>
+              <strong class="total">{{ order.totalPrice | egp }}</strong>
+            </div>
+            <span class="badge" [class]="statusClass(order.status)">{{ order.status }}</span>
+          </header>
+
+          <ul class="order-items">
+            @for (item of order.items; track item.product) {
+              <li>
+                <span class="thumb">
+                  <img [src]="image(item.imageUrl)" [alt]="item.name" width="56" height="56" />
+                </span>
+                <a class="item-name" [routerLink]="['/product', item.product]">{{ item.name }}</a>
+                <span class="muted">× {{ item.quantity }}</span>
+                <span class="item-price">{{ item.price * item.quantity | egp }}</span>
+              </li>
+            }
+          </ul>
+
+          <footer class="order-foot">
+            <span>
+              <app-icon name="truck" [size]="16" />
+              {{ order.shippingAddress }}
+            </span>
+            <span>
+              <app-icon name="wallet" [size]="16" />
+              {{ order.paymentMethod === 'cash' ? 'Cash on delivery' : 'Card on delivery' }}
+            </span>
+          </footer>
+        </article>
+      }
+    </div>
+  }
+</div>

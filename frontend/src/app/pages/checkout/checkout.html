@@ -1,0 +1,151 @@
+<div class="container page">
+  <header class="section-head">
+    <div>
+      <h1>Checkout</h1>
+      <p class="muted">One step — confirm where it goes and how you'll pay.</p>
+    </div>
+    <a class="btn btn-outline btn-sm" routerLink="/cart">
+      <app-icon name="chevron-left" [size]="16" /> Back to cart
+    </a>
+  </header>
+
+  @if (items().length === 0) {
+    <div class="empty-state card">
+      <app-icon name="cart" [size]="46" />
+      <h2>Nothing to check out</h2>
+      <p>Add a product to your cart first.</p>
+      <a class="btn btn-primary" routerLink="/">Browse products</a>
+    </div>
+  } @else {
+    <div class="checkout-layout">
+      <section class="card form-card animate-in">
+        <h2>Delivery details</h2>
+
+        <form [formGroup]="checkoutForm" (ngSubmit)="placeOrder()" novalidate>
+          <div class="field">
+            <label for="shippingAddress">Shipping address</label>
+            <textarea
+              id="shippingAddress"
+              formControlName="shippingAddress"
+              placeholder="Street, building, floor, city"
+              [class.invalid]="showError('shippingAddress')"
+            ></textarea>
+            @if (showError('shippingAddress')) {
+              <p class="field-error">
+                <app-icon name="alert" [size]="14" />
+                @if (control('shippingAddress').errors?.['required']) {
+                  We need an address to deliver to.
+                } @else {
+                  Give us a bit more detail (at least 10 characters).
+                }
+              </p>
+            }
+          </div>
+
+          <div class="field">
+            <label for="phone">Contact phone</label>
+            <input
+              id="phone"
+              type="tel"
+              formControlName="phone"
+              placeholder="01000000000"
+              [class.invalid]="showError('phone')"
+            />
+            @if (showError('phone')) {
+              <p class="field-error">
+                <app-icon name="alert" [size]="14" />
+                @if (control('phone').errors?.['required']) {
+                  A phone number is required.
+                } @else {
+                  Enter 10 to 15 digits.
+                }
+              </p>
+            } @else {
+              <p class="field-hint">The courier calls this number before arriving.</p>
+            }
+          </div>
+
+          <fieldset class="payment">
+            <legend>Payment method</legend>
+
+            <label
+              class="pay-option"
+              [class.selected]="checkoutForm.controls.paymentMethod.value === 'cash'"
+            >
+              <input type="radio" value="cash" formControlName="paymentMethod" />
+              <app-icon name="wallet" [size]="22" />
+              <span>
+                <strong>Cash on delivery</strong>
+                <span class="muted">Pay the courier when the box arrives.</span>
+              </span>
+            </label>
+
+            <label
+              class="pay-option"
+              [class.selected]="checkoutForm.controls.paymentMethod.value === 'card'"
+            >
+              <input type="radio" value="card" formControlName="paymentMethod" />
+              <app-icon name="tag" [size]="22" />
+              <span>
+                <strong>Card on delivery</strong>
+                <span class="muted">The courier brings a card machine.</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="submitting()">
+            @if (submitting()) {
+              <span class="spinner"></span> Placing order…
+            } @else {
+              Place order · {{ total() | egp }}
+            }
+          </button>
+        </form>
+      </section>
+
+      <aside class="card review">
+        <h2>Your order</h2>
+
+        <ul class="review-items">
+          @for (item of items(); track item.product._id) {
+            <li>
+              <span class="thumb">
+                <img
+                  [src]="image(item.product.imageUrl)"
+                  [alt]="item.product.name"
+                  width="52"
+                  height="52"
+                />
+                <span class="qty-badge">{{ item.quantity }}</span>
+              </span>
+              <span class="review-name">{{ item.product.name }}</span>
+              <span class="review-price">{{ item.product.price * item.quantity | egp }}</span>
+            </li>
+          }
+        </ul>
+
+        <dl>
+          <div>
+            <dt>Subtotal</dt>
+            <dd>{{ subtotal() | egp }}</dd>
+          </div>
+          <div>
+            <dt>Shipping</dt>
+            <dd>
+              @if (shipping() === 0) {
+                <span class="free">Free</span>
+              } @else {
+                {{ shipping() | egp }}
+              }
+            </dd>
+          </div>
+        </dl>
+
+        <div class="total">
+          <span>Total</span>
+          <strong>{{ total() | egp }}</strong>
+        </div>
+      </aside>
+    </div>
+  }
+</div>

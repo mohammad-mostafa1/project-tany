@@ -1,0 +1,239 @@
+<header class="section-head">
+  <div>
+    <h1>{{ isEdit() ? 'Edit product' : 'Add product' }}</h1>
+    <p class="muted">
+      {{
+        isEdit()
+          ? 'Update the details, price or stock — changes go live immediately.'
+          : 'Fill in the details and upload a product photo.'
+      }}
+    </p>
+  </div>
+  <a class="btn btn-outline btn-sm" routerLink="/admin/products">
+    <app-icon name="chevron-left" [size]="16" /> Back to products
+  </a>
+</header>
+
+@if (loading()) {
+  <div class="skeleton form-skeleton" aria-hidden="true"></div>
+} @else {
+  <form [formGroup]="productForm" (ngSubmit)="submit()" novalidate class="form-layout">
+    <section class="card form-main">
+      <h2>Details</h2>
+
+      <div class="field">
+        <label for="name">Product name</label>
+        <input
+          id="name"
+          type="text"
+          formControlName="name"
+          placeholder="Apple iPhone 17 Pro Max"
+          [class.invalid]="showError('name')"
+        />
+        @if (showError('name')) {
+          <p class="field-error">
+            <app-icon name="alert" [size]="14" />
+            @if (control('name').errors?.['required']) {
+              Product name is required.
+            } @else {
+              Use at least 3 characters.
+            }
+          </p>
+        }
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="brand">Brand</label>
+          <input
+            id="brand"
+            type="text"
+            formControlName="brand"
+            placeholder="Apple"
+            [class.invalid]="showError('brand')"
+          />
+          @if (showError('brand')) {
+            <p class="field-error"><app-icon name="alert" [size]="14" /> Brand is required.</p>
+          }
+        </div>
+
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category" formControlName="category">
+            @for (category of categories; track category.slug) {
+              <option [value]="category.slug">{{ category.label }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      @if (subCategoryOptions().length) {
+        <div class="field">
+          <label for="subCategory">Accessory type</label>
+          <select id="subCategory" formControlName="subCategory">
+            <option value="">No sub category</option>
+            @for (sub of subCategoryOptions(); track sub.slug) {
+              <option [value]="sub.slug">{{ sub.label }}</option>
+            }
+          </select>
+          <p class="field-hint">Used by the Headphones / Keyboards / Mice tabs.</p>
+        </div>
+      }
+
+      <div class="field">
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          formControlName="description"
+          placeholder="What makes this product worth buying?"
+          [class.invalid]="showError('description')"
+        ></textarea>
+        @if (showError('description')) {
+          <p class="field-error">
+            <app-icon name="alert" [size]="14" /> Keep it under 1000 characters.
+          </p>
+        }
+      </div>
+
+      <div class="specs-head">
+        <h2>Specifications</h2>
+        <button type="button" class="btn btn-ghost btn-sm" (click)="addSpec()">
+          <app-icon name="plus" [size]="15" /> Add row
+        </button>
+      </div>
+
+      <div formArrayName="specs" class="spec-rows">
+        @for (spec of specs.controls; track $index; let i = $index) {
+          <div class="spec-row" [formGroupName]="i">
+            <input type="text" formControlName="key" placeholder="Display" aria-label="Spec name" />
+            <input
+              type="text"
+              formControlName="value"
+              placeholder="6.9&quot; Super Retina XDR"
+              aria-label="Spec value"
+            />
+            <button
+              type="button"
+              class="icon-btn small danger"
+              (click)="removeSpec(i)"
+              aria-label="Remove specification row"
+            >
+              <app-icon name="trash" [size]="15" />
+            </button>
+          </div>
+        }
+      </div>
+    </section>
+
+    <aside class="side-column">
+      <section class="card">
+        <h2>Pricing &amp; stock</h2>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="price">Price (EGP)</label>
+            <input
+              id="price"
+              type="number"
+              min="1"
+              formControlName="price"
+              [class.invalid]="showError('price')"
+            />
+            @if (showError('price')) {
+              <p class="field-error">
+                <app-icon name="alert" [size]="14" /> Price must be above 0.
+              </p>
+            }
+          </div>
+
+          <div class="field">
+            <label for="oldPrice">Was (EGP)</label>
+            <input id="oldPrice" type="number" min="0" formControlName="oldPrice" />
+            <p class="field-hint">Leave 0 for no discount badge.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="stock">Stock</label>
+            <input
+              id="stock"
+              type="number"
+              min="0"
+              formControlName="stock"
+              [class.invalid]="showError('stock')"
+            />
+            @if (showError('stock')) {
+              <p class="field-error">
+                <app-icon name="alert" [size]="14" /> Stock cannot be negative.
+              </p>
+            }
+          </div>
+
+          <div class="field">
+            <label for="rating">Rating</label>
+            <input
+              id="rating"
+              type="number"
+              min="0"
+              max="5"
+              step="0.1"
+              formControlName="rating"
+              [class.invalid]="showError('rating')"
+            />
+            @if (showError('rating')) {
+              <p class="field-error">
+                <app-icon name="alert" [size]="14" /> Rating is between 0 and 5.
+              </p>
+            }
+          </div>
+        </div>
+
+        <label class="switch-row">
+          <input type="checkbox" formControlName="isFeatured" />
+          <span>
+            <strong>Feature this product</strong>
+            <span class="muted">Highlights it across the storefront.</span>
+          </span>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Product image</h2>
+
+        <div class="image-drop">
+          @if (imagePreview(); as preview) {
+            <img [src]="preview" alt="Product preview" />
+          } @else {
+            <div class="placeholder">
+              <app-icon name="image" [size]="34" />
+              <span class="muted">PNG or JPG, up to 5 MB</span>
+            </div>
+          }
+        </div>
+
+        <label class="btn btn-outline btn-block file-btn">
+          <app-icon name="image" [size]="17" />
+          {{ imagePreview() ? 'Replace image' : 'Choose image' }}
+          <input type="file" accept="image/*" (change)="onImageSelected($event)" hidden />
+        </label>
+
+        @if (imageName()) {
+          <p class="field-hint file-name">{{ imageName() }}</p>
+        }
+        @if (isEdit()) {
+          <p class="field-hint">Leave it as-is to keep the current photo.</p>
+        }
+      </section>
+
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="saving()">
+        @if (saving()) {
+          <span class="spinner"></span> Saving…
+        } @else {
+          <app-icon name="check" [size]="18" />
+          {{ isEdit() ? 'Save changes' : 'Add product' }}
+        }
+      </button>
+    </aside>
+  </form>
+}

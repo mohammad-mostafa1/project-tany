@@ -1,0 +1,1926 @@
+[
+  {
+    "name": "Apple iPhone 17 Pro Max",
+    "slug": "iphone-17-pro-max",
+    "brand": "Apple",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "Apple's flagship with the A19 Pro chip, a 6.9-inch Super Retina XDR display and a pro-grade triple camera system built for low light and 4K video.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.9\" Super Retina XDR"
+      },
+      {
+        "key": "Chip",
+        "value": "A19 Pro"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Camera",
+        "value": "48MP triple"
+      },
+      {
+        "key": "Battery",
+        "value": "4700 mAh"
+      }
+    ],
+    "price": 96990,
+    "oldPrice": 116400,
+    "imageUrl": "iphone-17-pro-max.png",
+    "stock": 24,
+    "rating": 4.9,
+    "sold": 412,
+    "isFeatured": true
+  },
+  {
+    "name": "Apple iPhone 17 Pro",
+    "slug": "iphone-17-pro",
+    "brand": "Apple",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "The 6.3-inch iPhone 17 Pro pairs the A19 Pro chip with a titanium body, ProMotion 120Hz and an upgraded telephoto camera.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.3\" Super Retina XDR"
+      },
+      {
+        "key": "Chip",
+        "value": "A19 Pro"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Camera",
+        "value": "48MP triple"
+      },
+      {
+        "key": "Battery",
+        "value": "4200 mAh"
+      }
+    ],
+    "price": 90900,
+    "oldPrice": 109100,
+    "imageUrl": "iphone-17-pro.png",
+    "stock": 31,
+    "rating": 4.8,
+    "sold": 356,
+    "isFeatured": true
+  },
+  {
+    "name": "Apple iPhone 16",
+    "slug": "iphone-16",
+    "brand": "Apple",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "iPhone 16 brings the A18 chip, the Camera Control button and a 48MP Fusion camera in a light aluminium frame.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.1\" Super Retina XDR"
+      },
+      {
+        "key": "Chip",
+        "value": "A18"
+      },
+      {
+        "key": "Storage",
+        "value": "128 GB"
+      },
+      {
+        "key": "Camera",
+        "value": "48MP dual"
+      },
+      {
+        "key": "Battery",
+        "value": "3561 mAh"
+      }
+    ],
+    "price": 65990,
+    "oldPrice": 79200,
+    "imageUrl": "iphone-16.jpg",
+    "stock": 40,
+    "rating": 4.7,
+    "sold": 508,
+    "isFeatured": true
+  },
+  {
+    "name": "Samsung Galaxy S26 Ultra",
+    "slug": "galaxy-s26-ultra",
+    "brand": "Samsung",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "The Galaxy S26 Ultra packs a 200MP camera, a built-in S Pen and a 6.9-inch Dynamic AMOLED 2X panel that hits 2600 nits.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.9\" Dynamic AMOLED 2X"
+      },
+      {
+        "key": "Chip",
+        "value": "Snapdragon 8 Elite"
+      },
+      {
+        "key": "RAM",
+        "value": "12 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Camera",
+        "value": "200MP quad"
+      }
+    ],
+    "price": 72400,
+    "oldPrice": 86900,
+    "imageUrl": "galaxy-s26-ultra.jpg",
+    "stock": 18,
+    "rating": 4.8,
+    "sold": 389,
+    "isFeatured": true
+  },
+  {
+    "name": "Samsung Galaxy S26+",
+    "slug": "galaxy-s26-plus",
+    "brand": "Samsung",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "A 6.7-inch flagship with Galaxy AI, 45W fast charging and a triple camera tuned for night photography.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.7\" Dynamic AMOLED 2X"
+      },
+      {
+        "key": "Chip",
+        "value": "Snapdragon 8 Elite"
+      },
+      {
+        "key": "RAM",
+        "value": "12 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Camera",
+        "value": "50MP triple"
+      }
+    ],
+    "price": 59000,
+    "oldPrice": 70800,
+    "imageUrl": "galaxy-s26-plus.jpg",
+    "stock": 22,
+    "rating": 4.6,
+    "sold": 221,
+    "isFeatured": false
+  },
+  {
+    "name": "Samsung Galaxy A57 5G",
+    "slug": "galaxy-a57-5g",
+    "brand": "Samsung",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "Mid-range 5G with a 120Hz Super AMOLED screen, OIS main camera and a 5000 mAh battery that lasts two days.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.7\" Super AMOLED 120Hz"
+      },
+      {
+        "key": "Chip",
+        "value": "Exynos 1580"
+      },
+      {
+        "key": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Battery",
+        "value": "5000 mAh"
+      }
+    ],
+    "price": 39990,
+    "oldPrice": 48000,
+    "imageUrl": "galaxy-a57-5g.jpg",
+    "stock": 55,
+    "rating": 4.5,
+    "sold": 634,
+    "isFeatured": true
+  },
+  {
+    "name": "Samsung Galaxy A17",
+    "slug": "galaxy-a17",
+    "brand": "Samsung",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "An affordable Galaxy with a 50MP main camera, Super AMOLED display and six years of security updates.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.7\" Super AMOLED"
+      },
+      {
+        "key": "Chip",
+        "value": "Exynos 1330"
+      },
+      {
+        "key": "RAM",
+        "value": "6 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "128 GB"
+      },
+      {
+        "key": "Battery",
+        "value": "5000 mAh"
+      }
+    ],
+    "price": 11990,
+    "oldPrice": 14400,
+    "imageUrl": "galaxy-a17.jpg",
+    "stock": 90,
+    "rating": 4.3,
+    "sold": 871,
+    "isFeatured": true
+  },
+  {
+    "name": "Xiaomi Redmi Note 15 Pro 5G",
+    "slug": "redmi-note-15-pro-5g",
+    "brand": "Xiaomi",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "A 200MP camera, 1.5K AMOLED display and 45W turbo charging make this the value pick of the Redmi line.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.67\" 1.5K AMOLED"
+      },
+      {
+        "key": "Chip",
+        "value": "Snapdragon 7s Gen 4"
+      },
+      {
+        "key": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Camera",
+        "value": "200MP triple"
+      }
+    ],
+    "price": 28690,
+    "oldPrice": 34500,
+    "imageUrl": "redmi-note-15-pro-5g.jpg",
+    "stock": 38,
+    "rating": 4.6,
+    "sold": 445,
+    "isFeatured": false
+  },
+  {
+    "name": "Xiaomi Poco C85",
+    "slug": "poco-c85",
+    "brand": "Xiaomi",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "Big 6.9-inch 120Hz screen, 6000 mAh battery and a 50MP camera at an entry-level price.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.9\" LCD 120Hz"
+      },
+      {
+        "key": "Chip",
+        "value": "Helio G81 Ultra"
+      },
+      {
+        "key": "RAM",
+        "value": "6 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "128 GB"
+      },
+      {
+        "key": "Battery",
+        "value": "6000 mAh"
+      }
+    ],
+    "price": 10490,
+    "oldPrice": 12600,
+    "imageUrl": "poco-c85.jpg",
+    "stock": 74,
+    "rating": 4.2,
+    "sold": 692,
+    "isFeatured": false
+  },
+  {
+    "name": "Oppo Reno 15 5G",
+    "slug": "oppo-reno-15-5g",
+    "brand": "Oppo",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "A slim flagship-feel body with a 50MP portrait telephoto camera and 80W SuperVOOC charging.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.59\" AMOLED 120Hz"
+      },
+      {
+        "key": "Chip",
+        "value": "Dimensity 8450"
+      },
+      {
+        "key": "RAM",
+        "value": "12 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Charging",
+        "value": "80W"
+      }
+    ],
+    "price": 35990,
+    "oldPrice": 43200,
+    "imageUrl": "oppo-reno-15-5g.jpg",
+    "stock": 26,
+    "rating": 4.5,
+    "sold": 187,
+    "isFeatured": false
+  },
+  {
+    "name": "Honor X7D",
+    "slug": "honor-x7d",
+    "brand": "Honor",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "Built around a 6500 mAh battery and a drop-resistant frame, with a 108MP main camera.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.8\" LCD 120Hz"
+      },
+      {
+        "key": "Chip",
+        "value": "Snapdragon 685"
+      },
+      {
+        "key": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Battery",
+        "value": "6500 mAh"
+      }
+    ],
+    "price": 15290,
+    "oldPrice": 18400,
+    "imageUrl": "honor-x7d.jpg",
+    "stock": 47,
+    "rating": 4.4,
+    "sold": 398,
+    "isFeatured": false
+  },
+  {
+    "name": "Realme 15T 5G",
+    "slug": "realme-15t-5g",
+    "brand": "Realme",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "A 7000 mAh titan battery, 50MP selfie camera and an ultra-slim 7.79mm profile.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.57\" AMOLED 144Hz"
+      },
+      {
+        "key": "Chip",
+        "value": "Dimensity 6400 Max"
+      },
+      {
+        "key": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Battery",
+        "value": "7000 mAh"
+      }
+    ],
+    "price": 17490,
+    "oldPrice": 21000,
+    "imageUrl": "realme-15t-5g.jpg",
+    "stock": 44,
+    "rating": 4.4,
+    "sold": 312,
+    "isFeatured": false
+  },
+  {
+    "name": "Infinix GT 30 Pro 5G",
+    "slug": "infinix-gt-30-pro-5g",
+    "brand": "Infinix",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "A gaming phone with shoulder triggers, a 144Hz AMOLED panel and 45W charging.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.78\" AMOLED 144Hz"
+      },
+      {
+        "key": "Chip",
+        "value": "Dimensity 8350 Ultimate"
+      },
+      {
+        "key": "RAM",
+        "value": "12 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Extras",
+        "value": "Shoulder triggers"
+      }
+    ],
+    "price": 24990,
+    "oldPrice": 30000,
+    "imageUrl": "infinix-gt-30-pro-5g.jpg",
+    "stock": 29,
+    "rating": 4.5,
+    "sold": 264,
+    "isFeatured": false
+  },
+  {
+    "name": "Vivo V70 FE 5G",
+    "slug": "vivo-v70-fe-5g",
+    "brand": "Vivo",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "Portrait photography specialist with a ZEISS-tuned camera and a 6500 mAh BlueVolt battery.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.77\" AMOLED 120Hz"
+      },
+      {
+        "key": "Chip",
+        "value": "Dimensity 7360"
+      },
+      {
+        "key": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Battery",
+        "value": "6500 mAh"
+      }
+    ],
+    "price": 25990,
+    "oldPrice": 31200,
+    "imageUrl": "vivo-v70-fe-5g.jpg",
+    "stock": 33,
+    "rating": 4.4,
+    "sold": 156,
+    "isFeatured": false
+  },
+  {
+    "name": "Huawei Nova 15 Max",
+    "slug": "huawei-nova-15-max",
+    "brand": "Huawei",
+    "category": "mobiles",
+    "subCategory": null,
+    "description": "A large 6.9-inch display, 108MP camera and 66W SuperCharge in a premium curved-glass body.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "6.9\" OLED 120Hz"
+      },
+      {
+        "key": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB"
+      },
+      {
+        "key": "Camera",
+        "value": "108MP triple"
+      },
+      {
+        "key": "Charging",
+        "value": "66W"
+      }
+    ],
+    "price": 21999,
+    "oldPrice": 26400,
+    "imageUrl": "huawei-nova-15-max.jpg",
+    "stock": 21,
+    "rating": 4.3,
+    "sold": 142,
+    "isFeatured": false
+  },
+  {
+    "name": "Apple MacBook Neo 13",
+    "slug": "macbook-neo-13",
+    "brand": "Apple",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "The A18 Pro chip in a 13-inch fanless body, with an all-day battery and a 5-core GPU for creative work.",
+    "specs": [
+      {
+        "key": "Display",
+        "value": "13.6\" Liquid Retina"
+      },
+      {
+        "key": "Chip",
+        "value": "Apple A18 Pro"
+      },
+      {
+        "key": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "256 GB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "5-core"
+      }
+    ],
+    "price": 47399,
+    "oldPrice": 55200,
+    "imageUrl": "macbook-neo-13.jpg",
+    "stock": 19,
+    "rating": 4.8,
+    "sold": 276,
+    "isFeatured": true
+  },
+  {
+    "name": "Lenovo Legion 5 Gaming",
+    "slug": "lenovo-legion-5-gaming",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "A serious 1440p gaming machine: Core i7-13650HX, 24GB of RAM and an RTX GPU behind a 165Hz panel.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core i7-13650HX"
+      },
+      {
+        "key": "RAM",
+        "value": "24 GB DDR5"
+      },
+      {
+        "key": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "NVIDIA GeForce RTX"
+      },
+      {
+        "key": "Display",
+        "value": "15.6\" 165Hz"
+      }
+    ],
+    "price": 74199,
+    "oldPrice": 95999,
+    "imageUrl": "lenovo-legion-5-gaming.jpg",
+    "stock": 12,
+    "rating": 4.7,
+    "sold": 143,
+    "isFeatured": true
+  },
+  {
+    "name": "Lenovo LOQ 15IRX9",
+    "slug": "lenovo-loq-15irx9",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "Entry-level gaming done right — i7-13650HX paired with an RTX 3050 and Lenovo's cold-front cooling.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core i7-13650HX"
+      },
+      {
+        "key": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "NVIDIA RTX 3050"
+      },
+      {
+        "key": "Display",
+        "value": "15.6\" FHD 144Hz"
+      }
+    ],
+    "price": 59799,
+    "oldPrice": 61200,
+    "imageUrl": "lenovo-loq-15irx9.jpg",
+    "stock": 16,
+    "rating": 4.6,
+    "sold": 198,
+    "isFeatured": true
+  },
+  {
+    "name": "Lenovo LOQ 15IAX9",
+    "slug": "lenovo-loq-15iax9",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "A well-balanced i5 gaming laptop with an RTX GPU, 16GB of RAM and a 144Hz display.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core i5-13450HX"
+      },
+      {
+        "key": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "NVIDIA GeForce RTX"
+      },
+      {
+        "key": "Display",
+        "value": "15.6\" FHD 144Hz"
+      }
+    ],
+    "price": 52499,
+    "oldPrice": 61100,
+    "imageUrl": "lenovo-loq-15iax9.jpg",
+    "stock": 20,
+    "rating": 4.5,
+    "sold": 231,
+    "isFeatured": false
+  },
+  {
+    "name": "HP Victus 15",
+    "slug": "hp-victus-15",
+    "brand": "HP",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "Core i7-13650HX and an RTX 4050 in a quiet chassis with a full 1TB SSD — plays everything at 1080p.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core i7-13650HX"
+      },
+      {
+        "key": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "1 TB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "NVIDIA RTX 4050"
+      },
+      {
+        "key": "Display",
+        "value": "15.6\" FHD"
+      }
+    ],
+    "price": 67999,
+    "oldPrice": 79200,
+    "imageUrl": "hp-victus-15.jpg",
+    "stock": 14,
+    "rating": 4.6,
+    "sold": 175,
+    "isFeatured": true
+  },
+  {
+    "name": "HP Omen 16",
+    "slug": "hp-omen-16",
+    "brand": "HP",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "A 16-inch enthusiast rig with Core Ultra 7 255H, 24GB of RAM and an RTX GPU for high-refresh gaming.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core Ultra 7 255H"
+      },
+      {
+        "key": "RAM",
+        "value": "24 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "NVIDIA GeForce RTX"
+      },
+      {
+        "key": "Display",
+        "value": "16\" QHD"
+      }
+    ],
+    "price": 80399,
+    "oldPrice": 93600,
+    "imageUrl": "hp-omen-16.jpg",
+    "stock": 9,
+    "rating": 4.7,
+    "sold": 89,
+    "isFeatured": false
+  },
+  {
+    "name": "HP OmniBook 3",
+    "slug": "hp-omnibook-3",
+    "brand": "HP",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "An AI-ready everyday laptop: Ryzen AI 7 350, 16GB RAM and a 1TB SSD in a thin aluminium shell.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "AMD Ryzen AI 7 350"
+      },
+      {
+        "key": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "1 TB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "AMD Radeon 860M"
+      },
+      {
+        "key": "Display",
+        "value": "14\" WUXGA"
+      }
+    ],
+    "price": 47399,
+    "oldPrice": 55200,
+    "imageUrl": "hp-omnibook-3.jpg",
+    "stock": 23,
+    "rating": 4.4,
+    "sold": 154,
+    "isFeatured": false
+  },
+  {
+    "name": "Asus VivoBook S16",
+    "slug": "asus-vivobook-s16",
+    "brand": "Asus",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "A 16-inch productivity machine with Core Ultra 7 255H, 1TB of storage and Intel Arc graphics.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core Ultra 7 255H"
+      },
+      {
+        "key": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "1 TB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "Intel Arc"
+      },
+      {
+        "key": "Display",
+        "value": "16\" WUXGA"
+      }
+    ],
+    "price": 56699,
+    "oldPrice": 59800,
+    "imageUrl": "asus-vivobook-s16.jpg",
+    "stock": 17,
+    "rating": 4.5,
+    "sold": 167,
+    "isFeatured": false
+  },
+  {
+    "name": "Asus ROG Strix G16",
+    "slug": "asus-rog-strix-g16",
+    "brand": "Asus",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "Ryzen 9 8940HX plus a high-end RTX GPU and a 240Hz panel — built for competitive gaming.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "AMD Ryzen 9 8940HX"
+      },
+      {
+        "key": "RAM",
+        "value": "16 GB DDR5"
+      },
+      {
+        "key": "Storage",
+        "value": "1 TB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "NVIDIA GeForce RTX"
+      },
+      {
+        "key": "Display",
+        "value": "16\" QHD 240Hz"
+      }
+    ],
+    "price": 101999,
+    "oldPrice": 118800,
+    "imageUrl": "asus-rog-strix-g16.jpg",
+    "stock": 7,
+    "rating": 4.8,
+    "sold": 64,
+    "isFeatured": true
+  },
+  {
+    "name": "Asus ZenBook 14",
+    "slug": "asus-zenbook-14",
+    "brand": "Asus",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "A 1.2kg ultrabook with an OLED display, Core Ultra 7 and a 1TB SSD — the travel laptop.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core Ultra 7"
+      },
+      {
+        "key": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "1 TB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "Intel Arc"
+      },
+      {
+        "key": "Display",
+        "value": "14\" OLED"
+      }
+    ],
+    "price": 66999,
+    "oldPrice": 74700,
+    "imageUrl": "asus-zenbook-14.jpg",
+    "stock": 15,
+    "rating": 4.7,
+    "sold": 121,
+    "isFeatured": false
+  },
+  {
+    "name": "Asus TUF Gaming F16",
+    "slug": "asus-tuf-gaming-f16",
+    "brand": "Asus",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "Military-grade durability, DDR5 memory and an RTX GPU at the most accessible gaming price here.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core 5 210H"
+      },
+      {
+        "key": "RAM",
+        "value": "8 GB DDR5"
+      },
+      {
+        "key": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "NVIDIA GeForce RTX"
+      },
+      {
+        "key": "Display",
+        "value": "16\" FHD+ 144Hz"
+      }
+    ],
+    "price": 47699,
+    "oldPrice": 53400,
+    "imageUrl": "asus-tuf-gaming-f16.jpg",
+    "stock": 21,
+    "rating": 4.4,
+    "sold": 203,
+    "isFeatured": false
+  },
+  {
+    "name": "MSI Cyborg 15",
+    "slug": "msi-cyborg-15",
+    "brand": "MSI",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "A translucent-chassis gaming laptop with i7-13620H and an RTX GPU, tuned for cool sustained load.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core i7-13620H"
+      },
+      {
+        "key": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "NVIDIA GeForce RTX"
+      },
+      {
+        "key": "Display",
+        "value": "15.6\" FHD 144Hz"
+      }
+    ],
+    "price": 60099,
+    "oldPrice": 64999,
+    "imageUrl": "msi-cyborg-15.jpg",
+    "stock": 13,
+    "rating": 4.4,
+    "sold": 112,
+    "isFeatured": false
+  },
+  {
+    "name": "Acer Predator Helios Neo 18",
+    "slug": "acer-predator-helios-neo-18",
+    "brand": "Acer",
+    "category": "laptops",
+    "subCategory": null,
+    "description": "An 18-inch desktop replacement: Core i9-14900HX, 32GB of RAM and an RTX 4070 on a WQXGA screen.",
+    "specs": [
+      {
+        "key": "CPU",
+        "value": "Intel Core i9-14900HX"
+      },
+      {
+        "key": "RAM",
+        "value": "32 GB"
+      },
+      {
+        "key": "Storage",
+        "value": "1 TB SSD"
+      },
+      {
+        "key": "GPU",
+        "value": "NVIDIA RTX 4070"
+      },
+      {
+        "key": "Display",
+        "value": "18\" WQXGA"
+      }
+    ],
+    "price": 92699,
+    "oldPrice": 111999,
+    "imageUrl": "acer-predator-helios-neo-18.jpg",
+    "stock": 6,
+    "rating": 4.8,
+    "sold": 47,
+    "isFeatured": true
+  },
+  {
+    "name": "Sony INZONE H3 Gaming Headset",
+    "slug": "sony-inzone-h3",
+    "brand": "Sony",
+    "category": "accessories",
+    "subCategory": "headphones",
+    "description": "Sony's gaming headset with 360 Spatial Sound, a flip-to-mute boom mic and soft nylon ear pads for long sessions.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Over-ear gaming"
+      },
+      {
+        "key": "Driver",
+        "value": "40mm"
+      },
+      {
+        "key": "Mic",
+        "value": "Flip-to-mute boom"
+      },
+      {
+        "key": "Connection",
+        "value": "3.5mm"
+      },
+      {
+        "key": "Weight",
+        "value": "299 g"
+      }
+    ],
+    "price": 3199,
+    "oldPrice": 3999,
+    "imageUrl": "sony-inzone-h3.jpg",
+    "stock": 34,
+    "rating": 4.6,
+    "sold": 178,
+    "isFeatured": true
+  },
+  {
+    "name": "Logitech H540 USB Headset",
+    "slug": "logitech-h540",
+    "brand": "Logitech",
+    "category": "accessories",
+    "subCategory": "headphones",
+    "description": "A USB headset with laser-tuned drivers, noise-cancelling mic and on-ear volume controls for calls.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "On-ear"
+      },
+      {
+        "key": "Driver",
+        "value": "Laser-tuned"
+      },
+      {
+        "key": "Mic",
+        "value": "Noise-cancelling"
+      },
+      {
+        "key": "Connection",
+        "value": "USB"
+      },
+      {
+        "key": "Controls",
+        "value": "On-ear"
+      }
+    ],
+    "price": 2450,
+    "oldPrice": 2900,
+    "imageUrl": "logitech-h540.jpg",
+    "stock": 40,
+    "rating": 4.5,
+    "sold": 143,
+    "isFeatured": false
+  },
+  {
+    "name": "Logitech H390 Stereo Headset",
+    "slug": "logitech-h390",
+    "brand": "Logitech",
+    "category": "accessories",
+    "subCategory": "headphones",
+    "description": "The office standard: digital USB stereo, rotating noise-cancelling mic and padded headband.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "On-ear"
+      },
+      {
+        "key": "Driver",
+        "value": "Stereo"
+      },
+      {
+        "key": "Mic",
+        "value": "Noise-cancelling"
+      },
+      {
+        "key": "Connection",
+        "value": "USB"
+      },
+      {
+        "key": "Cable",
+        "value": "1.9 m"
+      }
+    ],
+    "price": 1199,
+    "oldPrice": 1800,
+    "imageUrl": "logitech-h390.jpg",
+    "stock": 88,
+    "rating": 4.4,
+    "sold": 521,
+    "isFeatured": true
+  },
+  {
+    "name": "Fantech Sonata MH90",
+    "slug": "fantech-sonata-mh90",
+    "brand": "Fantech",
+    "category": "accessories",
+    "subCategory": "headphones",
+    "description": "7.1 virtual surround gaming headset with RGB lighting and a detachable microphone.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Over-ear gaming"
+      },
+      {
+        "key": "Driver",
+        "value": "50mm"
+      },
+      {
+        "key": "Sound",
+        "value": "7.1 virtual surround"
+      },
+      {
+        "key": "Mic",
+        "value": "Detachable"
+      },
+      {
+        "key": "Lighting",
+        "value": "RGB"
+      }
+    ],
+    "price": 2199,
+    "oldPrice": 2599,
+    "imageUrl": "fantech-sonata-mh90.jpg",
+    "stock": 37,
+    "rating": 4.3,
+    "sold": 209,
+    "isFeatured": false
+  },
+  {
+    "name": "Fantech HG30 White",
+    "slug": "fantech-hg30",
+    "brand": "Fantech",
+    "category": "accessories",
+    "subCategory": "headphones",
+    "description": "A lightweight white gaming headset with 7.1 surround and breathable memory-foam pads.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Over-ear gaming"
+      },
+      {
+        "key": "Driver",
+        "value": "50mm"
+      },
+      {
+        "key": "Sound",
+        "value": "7.1 surround"
+      },
+      {
+        "key": "Mic",
+        "value": "Fixed boom"
+      },
+      {
+        "key": "Colour",
+        "value": "White"
+      }
+    ],
+    "price": 1590,
+    "oldPrice": 1899,
+    "imageUrl": "fantech-hg30.jpg",
+    "stock": 42,
+    "rating": 4.2,
+    "sold": 164,
+    "isFeatured": false
+  },
+  {
+    "name": "Maono AU-MH700 Studio",
+    "slug": "maono-au-mh700",
+    "brand": "Maono",
+    "category": "accessories",
+    "subCategory": "headphones",
+    "description": "Closed-back studio monitors with 50mm drivers and swivel cups for one-ear monitoring.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Studio monitor"
+      },
+      {
+        "key": "Driver",
+        "value": "50mm"
+      },
+      {
+        "key": "Impedance",
+        "value": "32 Ω"
+      },
+      {
+        "key": "Design",
+        "value": "Closed-back"
+      },
+      {
+        "key": "Cable",
+        "value": "Detachable"
+      }
+    ],
+    "price": 2699,
+    "oldPrice": 3319,
+    "imageUrl": "maono-au-mh700.jpg",
+    "stock": 18,
+    "rating": 4.6,
+    "sold": 71,
+    "isFeatured": false
+  },
+  {
+    "name": "HP Stereo Headset G2",
+    "slug": "hp-stereo-headset-g2",
+    "brand": "HP",
+    "category": "accessories",
+    "subCategory": "headphones",
+    "description": "A no-nonsense 3.5mm stereo headset with an adjustable mic, made for laptops and classrooms.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "On-ear"
+      },
+      {
+        "key": "Connection",
+        "value": "3.5mm"
+      },
+      {
+        "key": "Mic",
+        "value": "Adjustable"
+      },
+      {
+        "key": "Controls",
+        "value": "Inline"
+      },
+      {
+        "key": "Weight",
+        "value": "180 g"
+      }
+    ],
+    "price": 1380,
+    "oldPrice": 1700,
+    "imageUrl": "hp-stereo-headset-g2.jpg",
+    "stock": 60,
+    "rating": 4.1,
+    "sold": 256,
+    "isFeatured": false
+  },
+  {
+    "name": "Rapoo H120 Wired Headset",
+    "slug": "rapoo-h120",
+    "brand": "Rapoo",
+    "category": "accessories",
+    "subCategory": "headphones",
+    "description": "Budget stereo headset with a 40mm driver and inline controls — the value everyday pick.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "On-ear"
+      },
+      {
+        "key": "Driver",
+        "value": "40mm"
+      },
+      {
+        "key": "Connection",
+        "value": "USB"
+      },
+      {
+        "key": "Mic",
+        "value": "Rotating"
+      },
+      {
+        "key": "Weight",
+        "value": "160 g"
+      }
+    ],
+    "price": 640,
+    "oldPrice": 800,
+    "imageUrl": "rapoo-h120.jpg",
+    "stock": 95,
+    "rating": 4,
+    "sold": 384,
+    "isFeatured": false
+  },
+  {
+    "name": "Logitech MX Keys S",
+    "slug": "logitech-mx-keys-s",
+    "brand": "Logitech",
+    "category": "accessories",
+    "subCategory": "keyboards",
+    "description": "Logitech's flagship productivity keyboard: smart backlighting, spherically-dished keys and multi-device Bluetooth.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wireless membrane"
+      },
+      {
+        "key": "Connection",
+        "value": "Bluetooth / Logi Bolt"
+      },
+      {
+        "key": "Backlight",
+        "value": "Smart adaptive"
+      },
+      {
+        "key": "Battery",
+        "value": "Up to 10 days lit"
+      },
+      {
+        "key": "Devices",
+        "value": "3"
+      }
+    ],
+    "price": 7495,
+    "oldPrice": 9000,
+    "imageUrl": "logitech-mx-keys-s.jpg",
+    "stock": 14,
+    "rating": 4.8,
+    "sold": 96,
+    "isFeatured": true
+  },
+  {
+    "name": "Logitech MX Keys Mini",
+    "slug": "logitech-mx-keys-mini",
+    "brand": "Logitech",
+    "category": "accessories",
+    "subCategory": "keyboards",
+    "description": "The compact MX — same typing feel, minus the numpad, so your mouse sits closer to home.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wireless compact"
+      },
+      {
+        "key": "Connection",
+        "value": "Bluetooth"
+      },
+      {
+        "key": "Backlight",
+        "value": "Adaptive"
+      },
+      {
+        "key": "Battery",
+        "value": "10 days lit"
+      },
+      {
+        "key": "Layout",
+        "value": "75%"
+      }
+    ],
+    "price": 6799,
+    "oldPrice": 8100,
+    "imageUrl": "logitech-mx-keys-mini.jpg",
+    "stock": 20,
+    "rating": 4.7,
+    "sold": 118,
+    "isFeatured": false
+  },
+  {
+    "name": "Logitech Pebble Keys 2 K380s",
+    "slug": "logitech-pebble-keys-2-k380s",
+    "brand": "Logitech",
+    "category": "accessories",
+    "subCategory": "keyboards",
+    "description": "A slim multi-device Bluetooth keyboard with customisable shortcut keys and a 3-year battery.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wireless slim"
+      },
+      {
+        "key": "Connection",
+        "value": "Bluetooth"
+      },
+      {
+        "key": "Battery",
+        "value": "Up to 36 months"
+      },
+      {
+        "key": "Devices",
+        "value": "3"
+      },
+      {
+        "key": "Weight",
+        "value": "415 g"
+      }
+    ],
+    "price": 2545,
+    "oldPrice": 3100,
+    "imageUrl": "logitech-pebble-keys-2-k380s.jpg",
+    "stock": 33,
+    "rating": 4.5,
+    "sold": 187,
+    "isFeatured": false
+  },
+  {
+    "name": "Redragon K535-KR Mechanical",
+    "slug": "redragon-k535-kr",
+    "brand": "Redragon",
+    "category": "accessories",
+    "subCategory": "keyboards",
+    "description": "A low-profile mechanical board with blue switches and per-key RGB, built for gaming desks.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Mechanical"
+      },
+      {
+        "key": "Switch",
+        "value": "Blue"
+      },
+      {
+        "key": "Lighting",
+        "value": "RGB per-key"
+      },
+      {
+        "key": "Layout",
+        "value": "Full-size"
+      },
+      {
+        "key": "Connection",
+        "value": "Wired USB"
+      }
+    ],
+    "price": 2250,
+    "oldPrice": 2500,
+    "imageUrl": "redragon-k535-kr.jpg",
+    "stock": 26,
+    "rating": 4.5,
+    "sold": 142,
+    "isFeatured": true
+  },
+  {
+    "name": "Redragon K679 RGB",
+    "slug": "redragon-k679-rgb",
+    "brand": "Redragon",
+    "category": "accessories",
+    "subCategory": "keyboards",
+    "description": "Blue-switch mechanical keyboard with RGB backlighting and a detachable wrist rest.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Mechanical"
+      },
+      {
+        "key": "Switch",
+        "value": "Blue"
+      },
+      {
+        "key": "Lighting",
+        "value": "RGB"
+      },
+      {
+        "key": "Layout",
+        "value": "Full-size"
+      },
+      {
+        "key": "Extras",
+        "value": "Wrist rest"
+      }
+    ],
+    "price": 1900,
+    "oldPrice": 2199,
+    "imageUrl": "redragon-k679-rgb.jpg",
+    "stock": 29,
+    "rating": 4.4,
+    "sold": 168,
+    "isFeatured": false
+  },
+  {
+    "name": "MSI Vigor GK30 Combo",
+    "slug": "msi-vigor-gk30-combo",
+    "brand": "MSI",
+    "category": "accessories",
+    "subCategory": "keyboards",
+    "description": "Mechanical-feel gaming keyboard bundled with a matching RGB mouse — water-resistant and ready to plug in.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Mech-like membrane"
+      },
+      {
+        "key": "Lighting",
+        "value": "RGB"
+      },
+      {
+        "key": "Bundle",
+        "value": "Keyboard + mouse"
+      },
+      {
+        "key": "Rating",
+        "value": "IPX runoff"
+      },
+      {
+        "key": "Connection",
+        "value": "Wired USB"
+      }
+    ],
+    "price": 2150,
+    "oldPrice": 2600,
+    "imageUrl": "msi-vigor-gk30-combo.jpg",
+    "stock": 24,
+    "rating": 4.3,
+    "sold": 134,
+    "isFeatured": false
+  },
+  {
+    "name": "Cougar G-871 Mechanical",
+    "slug": "cougar-g-871",
+    "brand": "Cougar",
+    "category": "accessories",
+    "subCategory": "keyboards",
+    "description": "Compact wired mechanical gaming keyboard with backlighting and an aluminium top plate.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Mechanical"
+      },
+      {
+        "key": "Lighting",
+        "value": "Backlit"
+      },
+      {
+        "key": "Frame",
+        "value": "Aluminium"
+      },
+      {
+        "key": "Connection",
+        "value": "Wired USB"
+      },
+      {
+        "key": "Colour",
+        "value": "Black"
+      }
+    ],
+    "price": 760,
+    "oldPrice": 1000,
+    "imageUrl": "cougar-g-871.jpg",
+    "stock": 36,
+    "rating": 4.2,
+    "sold": 211,
+    "isFeatured": false
+  },
+  {
+    "name": "Rapoo NK1900 Wired",
+    "slug": "rapoo-nk1900",
+    "brand": "Rapoo",
+    "category": "accessories",
+    "subCategory": "keyboards",
+    "description": "A spill-resistant wired keyboard with whisper-quiet keys — the safe pick for any desk.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Membrane"
+      },
+      {
+        "key": "Connection",
+        "value": "Wired USB"
+      },
+      {
+        "key": "Feature",
+        "value": "Spill resistant"
+      },
+      {
+        "key": "Keys",
+        "value": "Quiet"
+      },
+      {
+        "key": "Layout",
+        "value": "Full-size"
+      }
+    ],
+    "price": 375,
+    "oldPrice": 500,
+    "imageUrl": "rapoo-nk1900.png",
+    "stock": 110,
+    "rating": 4.1,
+    "sold": 478,
+    "isFeatured": false
+  },
+  {
+    "name": "Logitech MX Master 4",
+    "slug": "logitech-mx-master-4",
+    "brand": "Logitech",
+    "category": "accessories",
+    "subCategory": "mice",
+    "description": "The newest MX Master: haptic feedback, an 8K DPI sensor and Actions Ring for one-hand workflows.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wireless ergonomic"
+      },
+      {
+        "key": "Sensor",
+        "value": "8000 DPI"
+      },
+      {
+        "key": "Feedback",
+        "value": "Haptic"
+      },
+      {
+        "key": "Battery",
+        "value": "70 days"
+      },
+      {
+        "key": "Devices",
+        "value": "3"
+      }
+    ],
+    "price": 7099,
+    "oldPrice": 8400,
+    "imageUrl": "logitech-mx-master-4.jpg",
+    "stock": 11,
+    "rating": 4.9,
+    "sold": 84,
+    "isFeatured": true
+  },
+  {
+    "name": "Logitech MX Master 3S",
+    "slug": "logitech-mx-master-3s",
+    "brand": "Logitech",
+    "category": "accessories",
+    "subCategory": "mice",
+    "description": "Quiet clicks, MagSpeed electromagnetic scrolling and a sculpted shape that disappears under your hand.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wireless ergonomic"
+      },
+      {
+        "key": "Sensor",
+        "value": "8000 DPI"
+      },
+      {
+        "key": "Clicks",
+        "value": "90% quieter"
+      },
+      {
+        "key": "Battery",
+        "value": "70 days"
+      },
+      {
+        "key": "Devices",
+        "value": "3"
+      }
+    ],
+    "price": 6499,
+    "oldPrice": 7800,
+    "imageUrl": "logitech-mx-master-3s.jpg",
+    "stock": 17,
+    "rating": 4.8,
+    "sold": 176,
+    "isFeatured": true
+  },
+  {
+    "name": "Logitech M240 Silent Bluetooth",
+    "slug": "logitech-m240-silent",
+    "brand": "Logitech",
+    "category": "accessories",
+    "subCategory": "mice",
+    "description": "A compact silent-click Bluetooth mouse with a rounded shape that works in either hand.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wireless compact"
+      },
+      {
+        "key": "Connection",
+        "value": "Bluetooth"
+      },
+      {
+        "key": "Clicks",
+        "value": "Silent"
+      },
+      {
+        "key": "Battery",
+        "value": "18 months"
+      },
+      {
+        "key": "DPI",
+        "value": "4000"
+      }
+    ],
+    "price": 899,
+    "oldPrice": 1100,
+    "imageUrl": "logitech-m240-silent.jpg",
+    "stock": 58,
+    "rating": 4.5,
+    "sold": 342,
+    "isFeatured": false
+  },
+  {
+    "name": "Lenovo WL310 Silent",
+    "slug": "lenovo-wl310-silent",
+    "brand": "Lenovo",
+    "category": "accessories",
+    "subCategory": "mice",
+    "description": "Dual-mode Bluetooth and 2.4GHz mouse with silent switches and an adjustable 4000 DPI sensor.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wireless dual-mode"
+      },
+      {
+        "key": "Connection",
+        "value": "Bluetooth + 2.4G"
+      },
+      {
+        "key": "Clicks",
+        "value": "Silent"
+      },
+      {
+        "key": "DPI",
+        "value": "Up to 4000"
+      },
+      {
+        "key": "Buttons",
+        "value": "6"
+      }
+    ],
+    "price": 1290,
+    "oldPrice": 1500,
+    "imageUrl": "lenovo-wl310-silent.png",
+    "stock": 31,
+    "rating": 4.4,
+    "sold": 129,
+    "isFeatured": false
+  },
+  {
+    "name": "HP X200 Wireless Mouse",
+    "slug": "hp-x200-wireless",
+    "brand": "HP",
+    "category": "accessories",
+    "subCategory": "mice",
+    "description": "Ambidextrous 2.4GHz mouse with a one-year battery and a plug-and-forget nano receiver.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wireless"
+      },
+      {
+        "key": "Connection",
+        "value": "2.4 GHz"
+      },
+      {
+        "key": "DPI",
+        "value": "1600"
+      },
+      {
+        "key": "Battery",
+        "value": "12 months"
+      },
+      {
+        "key": "Shape",
+        "value": "Ambidextrous"
+      }
+    ],
+    "price": 640,
+    "oldPrice": 800,
+    "imageUrl": "hp-x200-wireless.jpg",
+    "stock": 77,
+    "rating": 4.2,
+    "sold": 396,
+    "isFeatured": false
+  },
+  {
+    "name": "Rapoo EV200 Silent Gaming",
+    "slug": "rapoo-ev200-silent",
+    "brand": "Rapoo",
+    "category": "accessories",
+    "subCategory": "mice",
+    "description": "Wired gaming mouse with silent switches, RGB lighting and an adjustable 12000 DPI sensor.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wired gaming"
+      },
+      {
+        "key": "DPI",
+        "value": "Up to 12000"
+      },
+      {
+        "key": "Clicks",
+        "value": "Silent"
+      },
+      {
+        "key": "Lighting",
+        "value": "RGB"
+      },
+      {
+        "key": "Buttons",
+        "value": "7"
+      }
+    ],
+    "price": 520,
+    "oldPrice": 700,
+    "imageUrl": "rapoo-ev200-silent.jpg",
+    "stock": 45,
+    "rating": 4.3,
+    "sold": 224,
+    "isFeatured": false
+  },
+  {
+    "name": "Redragon BM-4162 Dual Mode",
+    "slug": "redragon-bm-4162",
+    "brand": "Redragon",
+    "category": "accessories",
+    "subCategory": "mice",
+    "description": "Switch between Bluetooth and 2.4GHz on the fly, with a rechargeable battery and silent clicks.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wireless dual-mode"
+      },
+      {
+        "key": "Connection",
+        "value": "Bluetooth + 2.4G"
+      },
+      {
+        "key": "DPI",
+        "value": "Up to 3600"
+      },
+      {
+        "key": "Battery",
+        "value": "Rechargeable"
+      },
+      {
+        "key": "Clicks",
+        "value": "Silent"
+      }
+    ],
+    "price": 510,
+    "oldPrice": 599,
+    "imageUrl": "redragon-bm-4162.jpg",
+    "stock": 49,
+    "rating": 4.2,
+    "sold": 187,
+    "isFeatured": false
+  },
+  {
+    "name": "Logitech M90 Wired",
+    "slug": "logitech-m90-wired",
+    "brand": "Logitech",
+    "category": "accessories",
+    "subCategory": "mice",
+    "description": "The dependable wired optical mouse — plug it in and it just works, on any machine.",
+    "specs": [
+      {
+        "key": "Type",
+        "value": "Wired optical"
+      },
+      {
+        "key": "Connection",
+        "value": "USB"
+      },
+      {
+        "key": "DPI",
+        "value": "1000"
+      },
+      {
+        "key": "Buttons",
+        "value": "3"
+      },
+      {
+        "key": "Cable",
+        "value": "1.8 m"
+      }
+    ],
+    "price": 199,
+    "oldPrice": 300,
+    "imageUrl": "logitech-m90-wired.jpg",
+    "stock": 150,
+    "rating": 4.3,
+    "sold": 913,
+    "isFeatured": true
+  }
+]

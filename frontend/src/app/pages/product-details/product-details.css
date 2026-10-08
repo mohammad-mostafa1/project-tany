@@ -1,0 +1,275 @@
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.crumbs a:hover {
+  color: var(--primary);
+}
+
+.crumbs span:last-child {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* ---------- gallery ---------- */
+
+.gallery {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: var(--space-6);
+  background: var(--product-tile);
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.gallery .badge {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: 1;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform var(--t-slow) var(--ease-out);
+}
+
+.gallery:hover img {
+  transform: scale(1.07);
+}
+
+/* ---------- info ---------- */
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.brand {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.info h1 {
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.15rem);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.price-block {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding: var(--space-4);
+  background: var(--surface-2);
+  border-radius: var(--radius);
+}
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+.old {
+  color: var(--text-subtle);
+  font-size: 1rem;
+}
+
+.description {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ---------- buy row ---------- */
+
+.buy-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.qty button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  transition: background-color var(--t-fast) var(--ease-out);
+}
+
+.qty button:hover:not(:disabled) {
+  background: var(--surface-2);
+  color: var(--primary);
+}
+
+.qty button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.qty span {
+  min-width: 42px;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.fav.active {
+  color: var(--danger);
+  border-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.in-cart {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.9rem;
+  color: var(--success);
+  font-weight: 600;
+}
+
+.in-cart a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* ---------- specs ---------- */
+
+.specs {
+  margin-top: var(--space-4);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border);
+}
+
+.specs h2 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-3);
+}
+
+.specs dl {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.specs dl > div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: var(--space-3);
+  padding: 11px var(--space-4);
+  background: var(--surface);
+}
+
+.specs dt {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.specs dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+/* ---------- related ---------- */
+
+.related {
+  margin-top: var(--space-8);
+}
+
+/* ---------- skeleton ---------- */
+
+.detail-skeleton {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: var(--space-6);
+}
+
+.media-skeleton {
+  aspect-ratio: 1;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.line {
+  height: 26px;
+}
+.line.short {
+  width: 35%;
+}
+.line.half {
+  width: 60%;
+  height: 120px;
+}
+
+@media (max-width: 900px) {
+  .detail,
+  .detail-skeleton {
+    grid-template-columns: 1fr;
+  }
+
+  .specs dl > div {
+    grid-template-columns: 120px 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .buy-row .btn {
+    flex: 1;
+  }
+}

@@ -1,0 +1,112 @@
+.account-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-5);
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-4));
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  margin-bottom: var(--space-2);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  box-shadow: var(--shadow-primary);
+}
+
+.profile-card h1 {
+  font-size: 1.25rem;
+}
+
+.profile-card > p {
+  font-size: 0.88rem;
+  word-break: break-all;
+}
+
+.role {
+  text-transform: capitalize;
+  margin-top: var(--space-1);
+}
+
+.quick-links {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  margin-block: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.quick-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: left;
+  transition: background-color var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out);
+}
+
+.quick-links a:hover {
+  background: var(--surface-2);
+  color: var(--primary);
+}
+
+.form-card {
+  padding: var(--space-6);
+}
+
+.form-card h2 {
+  font-size: 1.2rem;
+}
+
+.intro {
+  font-size: 0.92rem;
+  margin-bottom: var(--space-5);
+}
+
+.read-only {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0 var(--space-4);
+  padding-top: var(--space-2);
+  margin-top: var(--space-2);
+  border-top: 1px solid var(--border);
+}
+
+.read-only input:disabled {
+  background: var(--surface-2);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  text-transform: capitalize;
+}
+
+@media (max-width: 880px) {
+  .account-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    position: static;
+  }
+}

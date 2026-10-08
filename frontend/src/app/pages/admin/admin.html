@@ -1,0 +1,30 @@
+<div class="container page admin-shell">
+  <aside class="admin-nav card">
+    <header>
+      <span class="chip"><app-icon name="shield" [size]="15" /> Admin</span>
+      <strong>{{ user()?.firstName }} {{ user()?.lastName }}</strong>
+      <span class="muted">{{ user()?.email }}</span>
+    </header>
+
+    <nav>
+      @for (link of links; track link.path) {
+        <a [routerLink]="['/admin', link.path]" routerLinkActive="active">
+          <app-icon [name]="link.icon" [size]="18" />
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+
+    <a class="btn btn-primary btn-sm btn-block" routerLink="/admin/products/new">
+      <app-icon name="plus" [size]="16" /> Add product
+    </a>
+
+    <a class="storefront" routerLink="/">
+      <app-icon name="chevron-left" [size]="15" /> Back to storefront
+    </a>
+  </aside>
+
+  <section class="admin-content">
+    <router-outlet />
+  </section>
+</div>

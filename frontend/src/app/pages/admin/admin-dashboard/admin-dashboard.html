@@ -1,0 +1,140 @@
+<header class="section-head">
+  <div>
+    <h1>Dashboard</h1>
+    <p class="muted">A live read on the catalogue and what's selling.</p>
+  </div>
+  <a class="btn btn-primary btn-sm" routerLink="/admin/products/new">
+    <app-icon name="plus" [size]="16" /> Add product
+  </a>
+</header>
+
+<div class="stats stagger">
+  <article class="card stat">
+    <span class="stat-icon primary"><app-icon name="package" [size]="20" /></span>
+    <div>
+      <span class="muted">Products</span>
+      <strong>{{ products().length }}</strong>
+    </div>
+  </article>
+
+  <article class="card stat">
+    <span class="stat-icon accent"><app-icon name="clipboard" [size]="20" /></span>
+    <div>
+      <span class="muted">Orders</span>
+      <strong>{{ orders().length }}</strong>
+    </div>
+  </article>
+
+  <article class="card stat">
+    <span class="stat-icon success"><app-icon name="wallet" [size]="20" /></span>
+    <div>
+      <span class="muted">Revenue</span>
+      <strong>{{ revenue() | egp }}</strong>
+    </div>
+  </article>
+
+  <article class="card stat">
+    <span class="stat-icon warning"><app-icon name="truck" [size]="20" /></span>
+    <div>
+      <span class="muted">Pending</span>
+      <strong>{{ pendingCount() }}</strong>
+    </div>
+  </article>
+</div>
+
+<div class="panels">
+  <section class="card panel">
+    <header>
+      <h2>Top sellers</h2>
+      <a routerLink="/admin/products">View all</a>
+    </header>
+
+    @if (loading()) {
+      <div class="skeleton panel-skeleton" aria-hidden="true"></div>
+    } @else {
+      <ul class="rank-list">
+        @for (product of topSellers(); track product._id; let i = $index) {
+          <li>
+            <span class="rank">{{ i + 1 }}</span>
+            <span class="thumb">
+              <img [src]="image(product.imageUrl)" [alt]="product.name" width="42" height="42" />
+            </span>
+            <span class="rank-name">
+              <strong>{{ product.name }}</strong>
+              <span class="muted">{{ product.brand }}</span>
+            </span>
+            <span class="rank-value">{{ product.sold }} sold</span>
+          </li>
+        } @empty {
+          <li class="muted">No products yet.</li>
+        }
+      </ul>
+    }
+  </section>
+
+  <section class="card panel">
+    <header>
+      <h2>Low stock</h2>
+      <a routerLink="/admin/products">Restock</a>
+    </header>
+
+    <ul class="stock-list">
+      @for (product of lowStock(); track product._id) {
+        <li>
+          <a class="stock-name" [routerLink]="['/admin/products', product._id, 'edit']">
+            {{ product.name }}
+          </a>
+          <span
+            class="badge"
+            [class.badge-danger]="product.stock === 0"
+            [class.badge-neutral]="product.stock > 0"
+          >
+            {{ product.stock === 0 ? 'Out of stock' : product.stock + ' left' }}
+          </span>
+        </li>
+      } @empty {
+        <li class="muted">Everything is well stocked.</li>
+      }
+    </ul>
+  </section>
+
+  <section class="card panel">
+    <header>
+      <h2>Catalogue mix</h2>
+    </header>
+
+    <ul class="breakdown">
+      @for (entry of categoryBreakdown(); track entry.category) {
+        <li>
+          <div class="breakdown-head">
+            <span>{{ entry.category }}</span>
+            <span class="muted">{{ entry.count }} · {{ entry.percentage }}%</span>
+          </div>
+          <div class="bar"><span [style.width.%]="entry.percentage"></span></div>
+        </li>
+      }
+    </ul>
+  </section>
+
+  <section class="card panel">
+    <header>
+      <h2>Recent orders</h2>
+      <a routerLink="/admin/orders">View all</a>
+    </header>
+
+    <ul class="order-list">
+      @for (order of recentOrders(); track order._id) {
+        <li>
+          <span class="order-name">
+            <strong>{{ customerName(order) }}</strong>
+            <span class="muted">{{ order.createdAt | date: 'short' }}</span>
+          </span>
+          <span class="order-total">{{ order.totalPrice | egp }}</span>
+          <span class="badge badge-neutral">{{ order.status }}</span>
+        </li>
+      } @empty {
+        <li class="muted">No orders yet.</li>
+      }
+    </ul>
+  </section>
+</div>

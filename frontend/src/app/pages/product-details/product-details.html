@@ -1,0 +1,169 @@
+<div class="container page">
+  @if (loading()) {
+    <div class="detail-skeleton">
+      <div class="skeleton media-skeleton"></div>
+      <div class="lines">
+        <div class="skeleton line short"></div>
+        <div class="skeleton line"></div>
+        <div class="skeleton line"></div>
+        <div class="skeleton line half"></div>
+      </div>
+    </div>
+  } @else if (notFound()) {
+    <div class="empty-state card">
+      <app-icon name="alert" [size]="46" />
+      <h2>We couldn't find that product</h2>
+      <p>It may have been removed from the catalogue.</p>
+      <a class="btn btn-primary" routerLink="/">Back to home</a>
+    </div>
+  } @else if (product(); as item) {
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a routerLink="/">Home</a>
+      <app-icon name="chevron-right" [size]="14" />
+      <a [routerLink]="['/category', item.category]">{{ item.category | titlecase }}</a>
+      <app-icon name="chevron-right" [size]="14" />
+      <span>{{ item.name }}</span>
+    </nav>
+
+    <div class="detail animate-in">
+      <div class="gallery card">
+        @if (item.discountPercentage > 0) {
+          <span class="badge badge-sale">-{{ item.discountPercentage }}%</span>
+        }
+        <img [src]="image()" [alt]="item.name" width="520" height="520" />
+      </div>
+
+      <div class="info">
+        <span class="brand">{{ item.brand }}</span>
+        <h1>{{ item.name }}</h1>
+
+        <div class="meta">
+          <app-star-rating [rating]="item.rating" [size]="16" />
+          <span class="muted">·</span>
+          <span class="muted">{{ item.sold }} sold</span>
+          <span class="muted">·</span>
+          @if (item.inStock) {
+            <span class="badge badge-success">
+              <app-icon name="check" [size]="13" /> In stock ({{ item.stock }})
+            </span>
+          } @else {
+            <span class="badge badge-danger">Out of stock</span>
+          }
+        </div>
+
+        <div class="price-block">
+          <span class="price">{{ item.price | egp }}</span>
+          @if (item.oldPrice) {
+            <s class="old">{{ item.oldPrice | egp }}</s>
+            <span class="badge badge-sale">Save {{ savings() | egp }}</span>
+          }
+        </div>
+
+        <p class="description">{{ item.description }}</p>
+
+        @if (!isAdmin()) {
+          <div class="buy-row">
+            <div class="qty" role="group" aria-label="Quantity">
+              <button
+                type="button"
+                (click)="changeQuantity(-1)"
+                [disabled]="quantity() <= 1"
+                aria-label="Decrease quantity"
+              >
+                <app-icon name="minus" [size]="16" />
+              </button>
+              <span>{{ quantity() }}</span>
+              <button
+                type="button"
+                (click)="changeQuantity(1)"
+                [disabled]="quantity() >= item.stock"
+                aria-label="Increase quantity"
+              >
+                <app-icon name="plus" [size]="16" />
+              </button>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="addToCart()"
+              [disabled]="!item.inStock || cartBusy()"
+            >
+              @if (cartBusy()) {
+                <span class="spinner"></span>
+              } @else {
+                <app-icon name="cart" [size]="18" />
+              }
+              Add to cart
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-accent"
+              (click)="buyNow()"
+              [disabled]="!item.inStock"
+            >
+              Buy now
+            </button>
+
+            <button
+              type="button"
+              class="icon-btn fav"
+              [class.active]="isFavourite()"
+              (click)="toggleFavourite()"
+              [attr.aria-pressed]="isFavourite()"
+              [attr.aria-label]="isFavourite() ? 'Remove from favourites' : 'Save to favourites'"
+            >
+              <app-icon name="heart" [filled]="isFavourite()" />
+            </button>
+          </div>
+
+          @if (inCartQuantity() > 0) {
+            <p class="in-cart">
+              <app-icon name="check-circle" [size]="16" />
+              {{ inCartQuantity() }} already in your cart —
+              <a routerLink="/cart">view cart</a>
+            </p>
+          }
+        } @else {
+          <div class="buy-row">
+            <a class="btn btn-primary" [routerLink]="['/admin/products', item._id, 'edit']">
+              <app-icon name="edit" [size]="18" /> Edit this product
+            </a>
+            <a class="btn btn-outline" routerLink="/admin/products">All products</a>
+          </div>
+        }
+
+        @if (item.specs.length) {
+          <div class="specs">
+            <h2>Specifications</h2>
+            <dl>
+              @for (spec of item.specs; track spec.key) {
+                <div>
+                  <dt>{{ spec.key }}</dt>
+                  <dd>{{ spec.value }}</dd>
+                </div>
+              }
+            </dl>
+          </div>
+        }
+      </div>
+    </div>
+
+    @if (related().length) {
+      <section class="related">
+        <div class="section-head">
+          <div>
+            <h2>You might also like</h2>
+            <p>More from {{ item.category }}.</p>
+          </div>
+        </div>
+        <div class="product-grid stagger">
+          @for (other of related(); track other._id) {
+            <app-product-card [product]="other" />
+          }
+        </div>
+      </section>
+    }
+  }
+</div>

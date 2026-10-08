@@ -1,0 +1,120 @@
+<div class="container page">
+  <header class="section-head">
+    <div>
+      <h1>Your cart</h1>
+      <p class="muted">
+        {{ count() }} {{ count() === 1 ? 'item' : 'items' }} ready to go.
+      </p>
+    </div>
+    <a class="btn btn-outline btn-sm" routerLink="/">
+      <app-icon name="chevron-left" [size]="16" /> Continue shopping
+    </a>
+  </header>
+
+  @if (items().length === 0) {
+    <div class="empty-state card">
+      <app-icon name="cart" [size]="46" />
+      <h2>Your cart is empty</h2>
+      <p>Browse the catalogue and add something you like.</p>
+      <a class="btn btn-primary" routerLink="/category/mobiles">Start shopping</a>
+    </div>
+  } @else {
+    <div class="cart-layout">
+      <section class="items stagger">
+        @for (item of items(); track item.product._id) {
+          <article class="cart-item card">
+            <a class="thumb" [routerLink]="['/product', item.product._id]">
+              <img [src]="image(item)" [alt]="item.product.name" width="110" height="110" />
+            </a>
+
+            <div class="details">
+              <span class="brand">{{ item.product.brand }}</span>
+              <a class="name" [routerLink]="['/product', item.product._id]">
+                {{ item.product.name }}
+              </a>
+              <span class="unit muted">{{ item.product.price | egp }} each</span>
+
+              @if (item.quantity >= item.product.stock) {
+                <span class="badge badge-neutral">Max stock reached</span>
+              }
+            </div>
+
+            <div class="qty" role="group" aria-label="Quantity">
+              <button
+                type="button"
+                (click)="decrease(item)"
+                [disabled]="item.quantity <= 1 || busy()"
+                aria-label="Decrease quantity"
+              >
+                <app-icon name="minus" [size]="15" />
+              </button>
+              <span>{{ item.quantity }}</span>
+              <button
+                type="button"
+                (click)="increase(item)"
+                [disabled]="item.quantity >= item.product.stock || busy()"
+                aria-label="Increase quantity"
+              >
+                <app-icon name="plus" [size]="15" />
+              </button>
+            </div>
+
+            <div class="line-total">{{ item.product.price * item.quantity | egp }}</div>
+
+            <button
+              type="button"
+              class="remove"
+              (click)="remove(item)"
+              [disabled]="busy()"
+              [attr.aria-label]="'Remove ' + item.product.name + ' from cart'"
+            >
+              <app-icon name="trash" [size]="17" />
+            </button>
+          </article>
+        }
+      </section>
+
+      <aside class="summary card">
+        <h2>Order summary</h2>
+
+        <dl>
+          <div>
+            <dt>Subtotal</dt>
+            <dd>{{ subtotal() | egp }}</dd>
+          </div>
+          <div>
+            <dt>Shipping</dt>
+            <dd>
+              @if (shipping() === 0) {
+                <span class="free">Free</span>
+              } @else {
+                {{ shipping() | egp }}
+              }
+            </dd>
+          </div>
+        </dl>
+
+        @if (shipping() > 0) {
+          <p class="field-hint">
+            Spend {{ 20000 - subtotal() | egp }} more for free delivery.
+          </p>
+        }
+
+        <div class="total">
+          <span>Total</span>
+          <strong>{{ total() | egp }}</strong>
+        </div>
+
+        <a class="btn btn-primary btn-block" routerLink="/checkout">
+          Checkout <app-icon name="arrow-right" [size]="18" />
+        </a>
+
+        <ul class="assurances">
+          <li><app-icon name="shield" [size]="15" /> Official warranty on every item</li>
+          <li><app-icon name="wallet" [size]="15" /> Cash on delivery available</li>
+          <li><app-icon name="refresh" [size]="15" /> 14-day returns</li>
+        </ul>
+      </aside>
+    </div>
+  }
+</div>

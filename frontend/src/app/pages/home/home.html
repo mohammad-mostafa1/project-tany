@@ -1,0 +1,144 @@
+<section class="hero">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy animate-in">
+      <span class="eyebrow">
+        <app-icon name="bolt" [size]="14" [filled]="true" />
+        Official warranty · Cash on delivery
+      </span>
+
+      <h1>The tech you want,<br />at the price Egypt actually pays.</h1>
+
+      <p>
+        Mobiles, laptops and accessories from Apple, Samsung, Lenovo, Asus, Logitech and
+        more — filtered by the brand and budget that fit you.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" routerLink="/category/mobiles">
+          Shop mobiles <app-icon name="arrow-right" [size]="18" />
+        </a>
+        <a class="btn btn-outline" routerLink="/category/laptops">Browse laptops</a>
+      </div>
+
+      <dl class="hero-stats">
+        <div><dt>52+</dt><dd>products in stock</dd></div>
+        <div><dt>14</dt><dd>brands</dd></div>
+        <div><dt>24h</dt><dd>delivery in Cairo</dd></div>
+      </dl>
+    </div>
+
+    @if (hero(); as product) {
+      <button type="button" class="hero-product" (click)="openHero()">
+        <span class="badge badge-sale">#1 best seller</span>
+        <img [src]="heroImage()" [alt]="product.name" width="320" height="320" />
+        <span class="hero-product-info">
+          <strong>{{ product.name }}</strong>
+          <span class="hero-price">{{ product.price | egp }}</span>
+        </span>
+      </button>
+    } @else {
+      <div class="hero-product skeleton" aria-hidden="true"></div>
+    }
+  </div>
+</section>
+
+<section class="container categories">
+  <div class="section-head">
+    <div>
+      <h2>Shop by category</h2>
+      <p>Three aisles, one checkout.</p>
+    </div>
+  </div>
+
+  <div class="category-grid stagger">
+    @for (category of categories; track category.slug) {
+      <article class="category-card">
+        <span class="category-icon">
+          <app-icon [name]="categoryIcons[category.slug]" [size]="26" />
+        </span>
+
+        <h3>{{ category.label }}</h3>
+        <p class="muted">{{ category.tagline }}</p>
+
+        @if (category.subCategories.length) {
+          <div class="chips">
+            @for (sub of category.subCategories; track sub.slug) {
+              <a
+                class="chip"
+                [routerLink]="['/category', category.slug]"
+                [queryParams]="{ sub: sub.slug }"
+              >
+                {{ sub.label }}
+              </a>
+            }
+          </div>
+        }
+
+        <button type="button" class="btn btn-ghost btn-sm" (click)="browse(category.slug)">
+          Browse {{ category.label }} <app-icon name="chevron-right" [size]="16" />
+        </button>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="container best-sellers">
+  <div class="section-head">
+    <div>
+      <h2>Best sellers</h2>
+      <p>What people in Egypt are actually buying this month.</p>
+    </div>
+    <a class="btn btn-outline btn-sm" routerLink="/search" [queryParams]="{ sort: 'best-selling' }">
+      See all <app-icon name="arrow-right" [size]="16" />
+    </a>
+  </div>
+
+  @if (loading()) {
+    <div class="product-grid">
+      @for (item of skeletons; track $index) {
+        <div class="card-skeleton skeleton" aria-hidden="true"></div>
+      }
+    </div>
+  } @else {
+    <div class="product-grid stagger">
+      @for (product of bestSellers(); track product._id) {
+        <app-product-card [product]="product" />
+      } @empty {
+        <p class="muted">No products yet.</p>
+      }
+    </div>
+  }
+</section>
+
+<section class="container split">
+  <div class="split-block">
+    <div class="section-head">
+      <div>
+        <h2>Top rated</h2>
+        <p>Highest scores from our buyers.</p>
+      </div>
+    </div>
+    <div class="product-grid stagger">
+      @for (product of deals(); track product._id) {
+        <app-product-card [product]="product" />
+      }
+    </div>
+  </div>
+
+  <div class="split-block">
+    <div class="section-head">
+      <div>
+        <h2>Premium picks</h2>
+        <p>The flagship end of the catalogue.</p>
+      </div>
+    </div>
+    <div class="product-grid stagger">
+      @for (product of newArrivals(); track product._id) {
+        <app-product-card [product]="product" />
+      }
+    </div>
+  </div>
+</section>

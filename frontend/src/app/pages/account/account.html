@@ -1,0 +1,134 @@
+<div class="container page">
+  @if (user(); as currentUser) {
+    <div class="account-layout">
+      <aside class="card profile-card animate-in">
+        <span class="avatar">{{ initials() }}</span>
+        <h1>{{ currentUser.firstName }} {{ currentUser.lastName }}</h1>
+        <p class="muted">{{ currentUser.email }}</p>
+        <span class="badge badge-primary role">{{ currentUser.role }}</span>
+
+        <nav class="quick-links">
+          @if (!isAdmin()) {
+            <a routerLink="/orders"><app-icon name="clipboard" [size]="17" /> My orders</a>
+            <a routerLink="/favourites"><app-icon name="heart" [size]="17" /> Favourites</a>
+            <a routerLink="/cart"><app-icon name="cart" [size]="17" /> Cart</a>
+          } @else {
+            <a routerLink="/admin/dashboard"><app-icon name="dashboard" [size]="17" /> Dashboard</a>
+            <a routerLink="/admin/products"><app-icon name="package" [size]="17" /> Products</a>
+            <a routerLink="/admin/orders"><app-icon name="clipboard" [size]="17" /> All orders</a>
+          }
+        </nav>
+
+        <button type="button" class="btn btn-danger btn-block" (click)="logout()">
+          <app-icon name="logout" [size]="17" /> Sign out
+        </button>
+      </aside>
+
+      <section class="card form-card">
+        <h2>Profile details</h2>
+        <p class="muted intro">
+          These details are used to fill in your checkout automatically.
+        </p>
+
+        <form (submit)="$event.preventDefault(); save()" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input
+                id="firstName"
+                type="text"
+                [formField]="profileForm.firstName"
+                [class.invalid]="
+                  profileForm.firstName().touched() && profileForm.firstName().invalid()
+                "
+              />
+              @if (profileForm.firstName().touched()) {
+                @for (error of profileForm.firstName().errors(); track $index) {
+                  <p class="field-error">
+                    <app-icon name="alert" [size]="14" /> {{ error.message }}
+                  </p>
+                }
+              }
+            </div>
+
+            <div class="field">
+              <label for="lastName">Last name</label>
+              <input
+                id="lastName"
+                type="text"
+                [formField]="profileForm.lastName"
+                [class.invalid]="
+                  profileForm.lastName().touched() && profileForm.lastName().invalid()
+                "
+              />
+              @if (profileForm.lastName().touched()) {
+                @for (error of profileForm.lastName().errors(); track $index) {
+                  <p class="field-error">
+                    <app-icon name="alert" [size]="14" /> {{ error.message }}
+                  </p>
+                }
+              }
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input
+              id="phone"
+              type="tel"
+              placeholder="01000000000"
+              [formField]="profileForm.phone"
+              [class.invalid]="profileForm.phone().touched() && profileForm.phone().invalid()"
+            />
+            @if (profileForm.phone().touched()) {
+              @for (error of profileForm.phone().errors(); track $index) {
+                <p class="field-error">
+                  <app-icon name="alert" [size]="14" /> {{ error.message }}
+                </p>
+              }
+            }
+          </div>
+
+          <div class="field">
+            <label for="address">Default delivery address</label>
+            <textarea
+              id="address"
+              placeholder="Street, building, floor, city"
+              [formField]="profileForm.address"
+              [class.invalid]="profileForm.address().touched() && profileForm.address().invalid()"
+            ></textarea>
+            @if (profileForm.address().touched()) {
+              @for (error of profileForm.address().errors(); track $index) {
+                <p class="field-error">
+                  <app-icon name="alert" [size]="14" /> {{ error.message }}
+                </p>
+              }
+            }
+          </div>
+
+          <div class="read-only">
+            <div class="field">
+              <label for="accountEmail">Email</label>
+              <input id="accountEmail" type="email" [value]="currentUser.email" disabled />
+              <p class="field-hint">Email cannot be changed after signup.</p>
+            </div>
+
+            <div class="field">
+              <label for="accountRole">Account type</label>
+              <input id="accountRole" type="text" [value]="currentUser.role" disabled />
+              <p class="field-hint">Only an admin can change roles in the database.</p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" [disabled]="saving()">
+            @if (saving()) {
+              <span class="spinner"></span> Saving…
+            } @else {
+              <app-icon name="check" [size]="18" /> Save changes
+            }
+          </button>
+        </form>
+      </section>
+    </div>
+  }
+</div>

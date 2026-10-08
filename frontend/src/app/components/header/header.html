@@ -1,0 +1,115 @@
+<header class="site-header">
+  <div class="container bar">
+    <button
+      type="button"
+      class="icon-btn menu-toggle"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Toggle navigation menu"
+    >
+      <app-icon [name]="menuOpen() ? 'close' : 'menu'" />
+    </button>
+
+    <a class="logo" routerLink="/" aria-label="VoltEdge home">
+      <span class="logo-mark"><app-icon name="bolt" [size]="20" [filled]="true" /></span>
+      <span class="logo-text">Volt<span>Edge</span></span>
+    </a>
+
+    <nav class="nav" [class.open]="menuOpen()" aria-label="Categories">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Home
+      </a>
+      @for (category of categories; track category.slug) {
+        <a [routerLink]="['/category', category.slug]" routerLinkActive="active">
+          {{ category.label }}
+        </a>
+      }
+      @if (isAdmin()) {
+        <a routerLink="/admin" routerLinkActive="active" class="admin-link">
+          <app-icon name="dashboard" [size]="16" />
+          Admin
+        </a>
+      }
+    </nav>
+
+    <form class="search" (ngSubmit)="search()" role="search">
+      <app-icon name="search" [size]="18" />
+      <input
+        type="search"
+        name="q"
+        [(ngModel)]="searchTerm"
+        placeholder="Search for iPhone, Legion, MX Master…"
+        aria-label="Search products"
+      />
+      <button type="submit" class="btn btn-primary btn-sm">Search</button>
+    </form>
+
+    <div class="actions">
+      <button
+        type="button"
+        class="icon-btn"
+        (click)="toggleTheme()"
+        [attr.aria-label]="
+          currentTheme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+        "
+      >
+        <app-icon [name]="currentTheme() === 'dark' ? 'sun' : 'moon'" />
+      </button>
+
+      @if (isCustomer()) {
+        <a class="icon-btn badged" routerLink="/favourites" aria-label="Favourites">
+          <app-icon name="heart" />
+          @if (favouriteCount() > 0) {
+            <span class="count">{{ favouriteCount() }}</span>
+          }
+        </a>
+
+        <a class="icon-btn badged" routerLink="/cart" aria-label="Shopping cart">
+          <app-icon name="cart" />
+          @if (cartCount() > 0) {
+            <span class="count accent">{{ cartCount() }}</span>
+          }
+        </a>
+      }
+
+      @if (isLoggedIn()) {
+        <div class="account">
+          <button
+            type="button"
+            class="avatar"
+            (click)="toggleAccount()"
+            [attr.aria-expanded]="accountOpen()"
+            aria-label="Account menu"
+          >
+            {{ initials() }}
+          </button>
+
+          @if (accountOpen()) {
+            <div class="dropdown">
+              <div class="dropdown-head">
+                <strong>{{ user()?.firstName }} {{ user()?.lastName }}</strong>
+                <span class="muted">{{ user()?.email }}</span>
+                <span class="badge badge-primary">{{ user()?.role }}</span>
+              </div>
+
+              <a routerLink="/account"><app-icon name="user" [size]="17" /> My account</a>
+
+              @if (isCustomer()) {
+                <a routerLink="/orders"><app-icon name="clipboard" [size]="17" /> My orders</a>
+                <a routerLink="/favourites"><app-icon name="heart" [size]="17" /> Favourites</a>
+              } @else {
+                <a routerLink="/admin"><app-icon name="dashboard" [size]="17" /> Admin panel</a>
+              }
+
+              <button type="button" (click)="logout()">
+                <app-icon name="logout" [size]="17" /> Sign out
+              </button>
+            </div>
+          }
+        </div>
+      } @else {
+        <a class="btn btn-primary btn-sm sign-in" routerLink="/signin">Sign in</a>
+      }
+    </div>
+  </div>
+</header>
